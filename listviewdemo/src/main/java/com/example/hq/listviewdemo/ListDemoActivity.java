@@ -63,6 +63,12 @@ public class ListDemoActivity extends Activity {
         ListAdapter adapter=new ArrayAdapter<String>(this,R.layout.listdemo_item,strs);
         HeaderViewListAdapter hadapter=new HeaderViewListAdapter(headerViewInfos,null,adapter);
     }
+
+    @Override
+    protected void onSaveInstanceState(Bundle outState) {
+        super.onSaveInstanceState(outState);
+    }
+
     public void setSimpleAdapter()
     {
          tv.setText("哈哈哈哈哈");
